@@ -24,7 +24,7 @@ def callback(ch, method, properties, body):
 if __name__ == '__main__':
   
     # sleep a few seconds to allow RabbitMQ server to come up
-    sleep(5)
+    sleep(7)
     connection = pika.BlockingConnection(pika.ConnectionParameters \
       (host='rabbitmq', port=5672))
     channel = connection.channel()

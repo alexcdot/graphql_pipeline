@@ -1,5 +1,5 @@
 rabbitmq:
-  image: rabbitmq:3-management
+  image: rabbitmq:3-management-alpine
   restart: always
   ports:
   - 5672:5672 # port for the daemon API

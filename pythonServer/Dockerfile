@@ -1,9 +1,8 @@
-FROM python:2.7-onbuild
+FROM python:alpine3.6
 
 WORKDIR /usr/src/app
 
-RUN pip install -r requirements.txt
-
 COPY . .
+RUN pip install -r requirements.txt
 
 CMD ["python", "graphqlServer.py"]

@@ -1,15 +1,15 @@
 {
-  "name": "rabbitMQ-tutorial",
+  "name": "nodeServer",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node server to server graphql API and rabbitMQ",
   "main": "graphqlServer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node graphqlServer.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Alexander Cui",
+  "license": "MIT",
   "dependencies": {
     "amqplib": "^0.5.1",
     "express": "^4.16.2",
