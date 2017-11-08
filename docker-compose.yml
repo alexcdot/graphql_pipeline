@@ -1,0 +1,19 @@
+rabbitmq:
+  image: rabbitmq:3-management
+  restart: always
+  ports:
+  - 5672:5672 # port for the daemon API
+  - 15672:15672 # port for the RabbitMQ management interface
+node_server:
+  build: nodeServer
+  links:
+  - rabbitmq
+  ports:
+  - 4000:4000
+  #command: python consumer.py -p 5672 -s ${RABBIT_HOST_IP}
+python_server:
+  build: pythonServer
+  links:
+  - rabbitmq
+  # run the producer sending the message "Hello" 30 times
+  #command: python producer.py -p 5672 -s ${RABBIT_HOST_IP} -m "Hello" -r 30
